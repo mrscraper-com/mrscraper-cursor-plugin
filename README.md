@@ -1,34 +1,24 @@
-# Cursor plugin template
+# MrScraper — Cursor plugin
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Marketplace-ready Cursor plugin that registers the **hosted MrScraper MCP server** at `https://mcp.mscraper.com/mcp`.
 
-Two starter plugins are included:
+## Contents
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+- `plugins/mrscraper/` — plugin manifest, `mcp.json`, logo, skill, and README
+- `.cursor-plugin/marketplace.json` — marketplace metadata for submission
 
-## Getting started
+## Validate before submit
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+```bash
+node scripts/validate-template.mjs
+```
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+## Customize for submission
 
-To add more plugins, see `docs/add-a-plugin.md`.
+1. Update `.cursor-plugin/marketplace.json` → `owner` (name and email) to your legal publisher identity.
+2. Update `plugins/mrscraper/.cursor-plugin/plugin.json` → `author` to match.
+3. Confirm the MCP URL in `plugins/mrscraper/mcp.json` is correct for production.
 
-## Single plugin vs multi-plugin
+## Submission
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
-
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
-
-## Submission checklist
-
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+Follow Cursor’s current plugin submission process (see historical template guidance: valid manifests, logo path, validation passing, repository ready for Cursor team review).

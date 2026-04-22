@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">MrScraper</title>
+  <desc id="desc">MrScraper plugin logo</desc>
+  <rect width="128" height="128" rx="22" fill="#0c1222" />
+  <path d="M40 88c8-18 14-34 24-48 6-8 14-12 22-12 10 0 18 6 22 16 4 10 2 22-6 30-8 8-20 10-30 6" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" />
+  <circle cx="52" cy="44" r="6" fill="#f8fafc" />
+  <path d="M34 96h60" stroke="#64748b" stroke-width="6" stroke-linecap="round" />
+</svg>

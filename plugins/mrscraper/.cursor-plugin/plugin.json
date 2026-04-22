@@ -1,0 +1,21 @@
+{
+  "name": "mrscraper",
+  "displayName": "MrScraper",
+  "version": "0.1.0",
+  "description": "Web scraping and AI extraction via MrScraper: fetch rendered HTML, create AI scrapers, rerun jobs, and read results through a hosted MCP server.",
+  "author": {
+    "name": "MrScraper",
+    "email": "hello@mrscraper.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "plugin",
+    "mcp",
+    "mrscraper",
+    "scraping",
+    "web",
+    "extraction"
+  ],
+  "logo": "assets/logo.svg"
+}
