@@ -5,7 +5,7 @@
   "description": "Web scraping and AI extraction via MrScraper: fetch rendered HTML, create AI scrapers, rerun jobs, and read results through a hosted MCP server.",
   "author": {
     "name": "MrScraper",
-    "email": "hello@mrscraper.com"
+    "email": "ai@mrscraper.com"
   },
   "license": "MIT",
   "keywords": [
