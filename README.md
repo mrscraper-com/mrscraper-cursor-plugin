@@ -1,24 +1,20 @@
-# MrScraper — Cursor plugin
+# MrScraper — Cursor marketplace bundle
 
-Marketplace-ready Cursor plugin that registers the **hosted MrScraper MCP server** at `https://mcp.mscraper.com/mcp`.
+This repository is a **Cursor Marketplace**–ready bundle that ships the **MrScraper** plugin. The plugin registers a **hosted Model Context Protocol (MCP)** server so agents in Cursor can use MrScraper’s scraping and extraction tools without running a local scraper stack.
 
-## Contents
+**MCP endpoint:** `https://mcp.mrscraper.com/mcp` (defined in `plugins/mrscraper/mcp.json`).
 
-- `plugins/mrscraper/` — plugin manifest, `mcp.json`, logo, skill, and README
-- `.cursor-plugin/marketplace.json` — marketplace metadata for submission
+## What the plugin does
 
-## Validate before submit
+MrScraper exposes tools for web scraping workflows in chat: rendered HTML, AI-driven scrapers, job reruns, and results APIs. For setup (API token, usage notes), see [`plugins/mrscraper/README.md`](plugins/mrscraper/README.md).
 
-```bash
-node scripts/validate-template.mjs
-```
+## Repository layout
 
-## Customize for submission
+| Path | Purpose |
+|------|---------|
+| [`plugins/mrscraper/`](plugins/mrscraper/) | Plugin: `mcp.json`, manifest, logo, bundled skill |
+| [`plugins/mrscraper/.cursor-plugin/plugin.json`](plugins/mrscraper/.cursor-plugin/plugin.json) | Plugin manifest (`displayName`, `description`, `author`, `logo`, …) |
+| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | Marketplace bundle metadata and plugin list |
+| [`scripts/validate-template.mjs`](scripts/validate-template.mjs) | Validates manifests, paths, and component frontmatter |
+| [`docs/add-a-plugin.md`](docs/add-a-plugin.md) | How to add another plugin to this bundle |
 
-1. Update `.cursor-plugin/marketplace.json` → `owner` (name and email) to your legal publisher identity.
-2. Update `plugins/mrscraper/.cursor-plugin/plugin.json` → `author` to match.
-3. Confirm the MCP URL in `plugins/mrscraper/mcp.json` is correct for production.
-
-## Submission
-
-Follow Cursor’s current plugin submission process (see historical template guidance: valid manifests, logo path, validation passing, repository ready for Cursor team review).
