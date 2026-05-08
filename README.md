@@ -1,20 +1,52 @@
-# MrScraper — Cursor marketplace bundle
+# Cursor plugin template
 
-This repository is a **Cursor Marketplace**–ready bundle that ships the **MrScraper** plugin. The plugin registers a **hosted Model Context Protocol (MCP)** server so agents in Cursor can use MrScraper’s scraping and extraction tools without running a local scraper stack.
+Build and publish Cursor Marketplace plugins from a single repository.
 
-**MCP endpoint:** `https://mcp.mrscraper.com/mcp` (defined in `plugins/mrscraper/mcp.json`).
+This bundle ships one plugin:
 
-## What the plugin does
+- **mrscraper**: hosted MrScraper MCP for rendered HTML, AI scrapers, job reruns, and results APIs
 
-MrScraper exposes tools for web scraping workflows in chat: rendered HTML, AI-driven scrapers, job reruns, and results APIs. For setup (API token, usage notes), see [`plugins/mrscraper/README.md`](plugins/mrscraper/README.md).
+## MrScraper plugin
 
-## Repository layout
+The `plugins/mrscraper/` plugin registers the **hosted MrScraper MCP server** so Cursor agents can call scraping tools from chat. The default connection uses the remote endpoint (no local scraper runtime required).
 
-| Path | Purpose |
-|------|---------|
-| [`plugins/mrscraper/`](plugins/mrscraper/) | Plugin: `mcp.json`, manifest, logo, bundled skill |
-| [`plugins/mrscraper/.cursor-plugin/plugin.json`](plugins/mrscraper/.cursor-plugin/plugin.json) | Plugin manifest (`displayName`, `description`, `author`, `logo`, …) |
-| [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json) | Marketplace bundle metadata and plugin list |
-| [`scripts/validate-template.mjs`](scripts/validate-template.mjs) | Validates manifests, paths, and component frontmatter |
-| [`docs/add-a-plugin.md`](docs/add-a-plugin.md) | How to add another plugin to this bundle |
+| Area | What you get |
+|------|----------------|
+| Raw page HTML | `fetch_html` — stealth, rendering, geo |
+| Structured extraction | `create_scraper` — natural-language instructions; listing vs map-style crawls |
+| Re-run jobs | `rerun_scraper`, `bulk_rerun_scraper`, `rerun_manual_scraper` |
+| Results | `get_all_results`, `get_result_by_id` |
 
+**Skill** — guidance the model uses to pick tools, handle tokens, and avoid unsafe or wasteful scraping:
+
+- `mrscraper` — authentication, tool selection, keeping HTML out of huge context payloads, crawl limits, and respectful use of targets
+
+### Quick setup
+
+1. Create an API token in the [MrScraper app](https://app.mrscraper.com).
+2. Install the plugin from the Marketplace (the bundle includes `plugins/mrscraper/mcp.json` with the hosted URL). To configure the server manually in Cursor, add:
+
+```json
+{
+  "mcpServers": {
+    "mrscraper": {
+      "url": "https://mcp.mrscraper.com/mcp"
+    }
+  }
+}
+```
+
+3. When tools run, pass your **token** in the tool arguments unless your environment injects auth another way.
+
+More detail: [`plugins/mrscraper/README.md`](plugins/mrscraper/README.md) and [`plugins/mrscraper/skills/mrscraper/SKILL.md`](plugins/mrscraper/skills/mrscraper/SKILL.md).
+
+## Validate before submit
+
+Requires Node.js (no extra packages):
+
+```bash
+node scripts/validate-template.mjs
+```
+
+Fix all errors before publishing. Adding another plugin under `plugins/` is described in [`docs/add-a-plugin.md`](docs/add-a-plugin.md).
+# mrscraper-cursor-plugin
