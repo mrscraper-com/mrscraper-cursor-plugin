@@ -1,11 +1,11 @@
 {
-  "name": "mrscraper",
+  "name": "mrscraper-cursor-plugin",
   "owner": {
     "name": "MrScraper",
     "email": "ai@mrscraper.com"
   },
   "metadata": {
-    "description": "Cursor Marketplace bundle for the MrScraper MCP plugin",
+    "description": "MrScraper Cursor plugin: hosted MCP for web scraping, AI extraction, reruns, and results APIs",
     "version": "0.1.0",
     "pluginRoot": "plugins"
   },

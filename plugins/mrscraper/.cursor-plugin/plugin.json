@@ -7,7 +7,9 @@
     "name": "MrScraper",
     "email": "ai@mrscraper.com"
   },
+  "homepage": "https://app.mrscraper.com",
   "license": "MIT",
+  "skills": "./skills/",
   "keywords": [
     "cursor",
     "plugin",

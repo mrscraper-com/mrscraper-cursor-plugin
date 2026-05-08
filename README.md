@@ -39,14 +39,3 @@ The `plugins/mrscraper/` plugin registers the **hosted MrScraper MCP server** so
 3. When tools run, pass your **token** in the tool arguments unless your environment injects auth another way.
 
 More detail: [`plugins/mrscraper/README.md`](plugins/mrscraper/README.md) and [`plugins/mrscraper/skills/mrscraper/SKILL.md`](plugins/mrscraper/skills/mrscraper/SKILL.md).
-
-## Validate before submit
-
-Requires Node.js (no extra packages):
-
-```bash
-node scripts/validate-template.mjs
-```
-
-Fix all errors before publishing. Adding another plugin under `plugins/` is described in [`docs/add-a-plugin.md`](docs/add-a-plugin.md).
-# mrscraper-cursor-plugin
