@@ -4,7 +4,7 @@ Build and publish Cursor Marketplace plugins from a single repository.
 
 This bundle ships one plugin:
 
-- **mrscraper**: hosted MrScraper MCP for rendered HTML, AI scrapers, job reruns, and results APIs
+- **mrscraper**: hosted MrScraper MCP for rendered HTML, Google SERP, AI scrapers, job reruns, and results APIs
 
 ## MrScraper plugin
 
@@ -13,6 +13,7 @@ The `plugins/mrscraper/` plugin registers the **hosted MrScraper MCP server** so
 | Area | What you get |
 |------|----------------|
 | Raw page HTML | `fetch_html` — stealth, rendering, geo |
+| Google SERP | `serp` — sync scrape of a Google search URL (structured results or raw) |
 | Structured extraction | `create_scraper` — natural-language instructions; listing vs map-style crawls |
 | Re-run jobs | `rerun_scraper`, `bulk_rerun_scraper`, `rerun_manual_scraper` |
 | Results | `get_all_results`, `get_result_by_id` |
