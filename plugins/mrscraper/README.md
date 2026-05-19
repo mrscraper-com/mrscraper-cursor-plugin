@@ -6,6 +6,11 @@ This plugin registers the **MrScraper** Model Context Protocol server so Cursor 
 
 - **Hosted MCP**: connects to `https://mcp.mrscraper.com/mcp` (no local Python install required).
 - **Tools**: fetch rendered HTML, Google SERP sync, create AI scrapers, rerun and bulk rerun, rerun manual scrapers, and read results (see MCP tool descriptions in Cursor).
+- **Skills** (one workflow per folder):
+  - **`ms-compliance`** — mandatory legal warning before login/cookie/credential scraping (Claude Code, Cursor, CLI, SDK)
+  - `ms-serp`, `ms-fetch-html`, `ms-ai-scraper`, `ms-batch`, `ms-manual`, `ms-results`, `ms-code`
+
+Agents must run **`ms-compliance`** when users supply username/password, cookies, session tokens, or want logged-in scraping. The user is warned they may be sued and bear all legal risk—not MrScraper.
 
 ## Setup
 
