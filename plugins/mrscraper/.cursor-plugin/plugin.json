@@ -2,7 +2,7 @@
   "name": "mrscraper",
   "displayName": "MrScraper",
   "version": "0.1.0",
-  "description": "Web scraping and AI extraction via MrScraper: fetch rendered HTML, create AI scrapers, rerun jobs, and read results through a hosted MCP server.",
+  "description": "Web scraping and AI extraction via MrScraper: fetch rendered HTML, Google SERP sync, create AI scrapers, rerun jobs, and read results through a hosted MCP server.",
   "author": {
     "name": "MrScraper",
     "email": "ai@mrscraper.com"
@@ -17,7 +17,9 @@
     "mrscraper",
     "scraping",
     "web",
-    "extraction"
+    "extraction",
+    "google",
+    "serp"
   ],
   "logo": "assets/logo.svg"
 }
