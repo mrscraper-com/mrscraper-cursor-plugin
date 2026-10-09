@@ -1,28 +1,22 @@
-# MrScraper (Cursor plugin)
+# MrScraper
 
-This plugin registers the **MrScraper** Model Context Protocol server so Cursor can call scraping tools from chat.
+This Cursor plugin connects to the hosted MrScraper MCP server and adds focused
+skills for raw page fetching, managed structured extraction, Google discovery,
+saved scraper reruns, stored results, and account usage. Grok Bot can install
+it from the Cursor Marketplace as well.
 
-## What you get
+When a public URL is known, fetch is the normal first content-acquisition step.
+It preserves the page response so the agent can inspect every available
+detail, answer follow-up questions, and apply reusable local extraction logic.
+Even for roughly 100 same-layout pages, concurrent fetches followed by one
+local batch extractor can be faster and more complete than repeating
+backend-LLM extraction for every page. Use scrape when managed extraction is
+explicitly requested or still offers a clear benefit after the source and
+output schema are understood.
 
-- **Hosted MCP**: connects to `https://mcp.mrscraper.com/mcp` (no local Python install required).
-- **Tools**: fetch rendered HTML, Google SERP sync, create AI scrapers, rerun and bulk rerun, rerun manual scrapers, and read results (see MCP tool descriptions in Cursor).
-- **Skills** (one workflow per folder):
-  - **`ms-compliance`** — mandatory legal warning before login/cookie/credential scraping (Claude Code, Cursor, CLI, SDK)
-  - `ms-serp`, `ms-fetch-html`, `ms-ai-scraper`, `ms-batch`, `ms-manual`, `ms-results`, `ms-code`
+The plugin connects to `https://mcp.mrscraper.com/mcp` and authenticates
+through OAuth 2.1 browser sign-in. A MrScraper account is required. Do not
+paste OAuth tokens or API keys into chat.
 
-Agents must run **`ms-compliance`** when users supply username/password, cookies, session tokens, or want logged-in scraping. The user is warned they may be sued and bear all legal risk—not MrScraper.
-
-## Setup
-
-1. Install the plugin from this marketplace/repository in Cursor.
-2. Obtain an API token from [app.mrscraper.com](https://app.mrscraper.com).
-3. When the agent runs a tool, provide the token in the tool arguments (`token` for most tools; `access_token` for `serp`, which uses the sync API bearer token).
-
-## Notes
-
-- Large HTML responses can exceed context limits; prefer writing HTML to a file or extracting specific sections before analysis.
-- Crawl depth and page limits materially affect cost and runtime; keep map crawls conservative unless you intend a broad crawl.
-
-## License
-
-MIT (see repository root if a root `LICENSE` is present).
+See the repository [README](../../README.md) for installation, usage, data
+handling, update, and support instructions.

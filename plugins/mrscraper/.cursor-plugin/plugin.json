@@ -1,25 +1,25 @@
 {
   "name": "mrscraper",
   "displayName": "MrScraper",
-  "version": "0.1.0",
-  "description": "Web scraping and AI extraction via MrScraper: fetch rendered HTML, Google SERP sync, create AI scrapers, rerun jobs, and read results through a hosted MCP server.",
+  "version": "0.2.0",
+  "description": "Web scraping for AI agents: fetch public pages through MrScraper's unblocker, run managed structured extraction and site mapping, search Google, rerun saved scrapers, and read stored results and account usage. Uses MrScraper's hosted MCP server with browser sign-in (OAuth), no API key to paste, plus skills for fetch-first workflows.",
   "author": {
     "name": "MrScraper",
-    "email": "ai@mrscraper.com"
+    "email": "support@mrscraper.com"
   },
-  "homepage": "https://app.mrscraper.com",
+  "homepage": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+  "repository": "https://github.com/mrscraper-com/mrscraper-cursor-plugin",
   "license": "MIT",
-  "skills": "./skills/",
   "keywords": [
-    "cursor",
-    "plugin",
-    "mcp",
     "mrscraper",
-    "scraping",
-    "web",
-    "extraction",
-    "google",
-    "serp"
+    "mcp",
+    "web-scraping",
+    "data-extraction",
+    "crawling",
+    "google-search",
+    "serp",
+    "research"
   ],
-  "logo": "assets/logo.svg"
+  "logo": "assets/logo.svg",
+  "skills": "./skills/"
 }

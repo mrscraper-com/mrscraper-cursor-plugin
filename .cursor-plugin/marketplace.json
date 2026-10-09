@@ -2,18 +2,18 @@
   "name": "mrscraper-cursor-plugin",
   "owner": {
     "name": "MrScraper",
-    "email": "ai@mrscraper.com"
+    "email": "support@mrscraper.com"
   },
   "metadata": {
-    "description": "MrScraper Cursor plugin: hosted MCP for web scraping, AI extraction, reruns, and results APIs",
-    "version": "0.1.0",
+    "description": "MrScraper for Cursor: hosted MCP server and skills for fetching web pages, structured extraction, Google search, saved scraper reruns, and stored results.",
+    "version": "0.2.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
     {
       "name": "mrscraper",
       "source": "mrscraper",
-      "description": "Hosted MrScraper MCP: rendered HTML, AI scrapers, reruns, and results APIs"
+      "description": "Fetch web pages, run structured extraction, search Google, rerun saved scrapers, and read stored results through MrScraper's hosted MCP server."
     }
   ]
 }
