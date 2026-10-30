@@ -5,15 +5,15 @@
     "email": "support@mrscraper.com"
   },
   "metadata": {
-    "description": "MrScraper for Cursor: hosted MCP server and skills for retrieving web pages as HTML, Markdown, or screenshots, Google search, and account usage.",
-    "version": "0.3.1",
+    "description": "MrScraper for Cursor: hosted MCP server and skills for retrieving web pages as HTML, Markdown, or screenshots, web search, and account usage.",
+    "version": "0.3.2",
     "pluginRoot": "plugins"
   },
   "plugins": [
     {
       "name": "mrscraper",
       "source": "mrscraper",
-      "description": "Retrieve web pages as HTML, Markdown, or screenshots, search Google, and check account usage through MrScraper's hosted MCP server."
+      "description": "Retrieve web pages as HTML, Markdown, or screenshots, search the web, and check account usage through MrScraper's hosted MCP server."
     }
   ]
 }

@@ -1,8 +1,8 @@
 # MrScraper for Cursor
 
 MrScraper connects [Cursor](https://cursor.com) to a hosted MCP server for
-retrieving public web pages as HTML, Markdown, or screenshots, Google
-discovery, and account usage. The plugin also includes three focused skills
+retrieving public web pages as HTML, Markdown, or screenshots, web
+search, and account usage. The plugin also includes three focused skills
 that help the agent choose the right workflow and preserve raw page content.
 
 [Grok Bot](https://docs.x.ai/grok-bot/overview) installs plugins from the
@@ -73,7 +73,7 @@ The connection exposes these MCP tools:
 | Tool | Purpose |
 | --- | --- |
 | `scraperAPI` | Retrieve a known page as HTML, Markdown, a screenshot, or a combination. |
-| `webSearch` | Discover public pages through Google. |
+| `webSearch` | Discover public pages through web search. |
 | `status` | Inspect subscription status, token usage, and remaining tokens. |
 
 The skills appear in Cursor's **Agent Decides** list, and you can invoke one
@@ -83,7 +83,7 @@ directly in chat:
 | --- | --- |
 | `/mrscraper` | Connection, authentication, routing, and account usage. |
 | `/mrscraper-fetch` | Page content from a known public URL; the default first step. |
-| `/mrscraper-serp` | Google discovery when no target URL is known. |
+| `/mrscraper-serp` | Web search when no target URL is known. |
 
 ## Retrieve-first routing
 

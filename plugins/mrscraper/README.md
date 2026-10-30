@@ -1,7 +1,7 @@
 # MrScraper
 
 This Cursor plugin connects to the hosted MrScraper MCP server and adds focused
-skills for page retrieval as HTML, Markdown, or screenshots, Google discovery,
+skills for page retrieval as HTML, Markdown, or screenshots, web search,
 and account usage. Grok Bot can install it from the Cursor Marketplace as well.
 
 When a public URL is known, scraperAPI is the normal first content-acquisition
