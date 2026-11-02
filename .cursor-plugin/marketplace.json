@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "MrScraper for Cursor: hosted MCP server and skills for retrieving web pages as HTML, Markdown, or screenshots, web search, and account usage.",
-    "version": "0.3.2",
+    "version": "0.4.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
